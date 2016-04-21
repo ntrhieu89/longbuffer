@@ -21,7 +21,7 @@ public class Benchmark {
 	 * @param numThreads
 	 * @param numNumbers
 	 */
-	public static void benchmark(LongBuffer buffer, int numThreads, int numNumbers) {
+	public static void benchmark(final LongBuffer buffer, int numThreads, final int numNumbers) {
 		// init threads
 		Thread[] threads = new Thread[numThreads];
 		for (int i = 0; i < threads.length; i++) {
