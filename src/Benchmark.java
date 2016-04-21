@@ -7,11 +7,15 @@ public class Benchmark {
 		LongBuffer buffer;
 		
 		// benchmark SynchronizedLongBuffer
-		buffer = new SynchronizedLongBuffer(20);
+		buffer = new SynchronizedLongBuffer(16);
 		benchmark(buffer, NUM_THREADS, NUM_NUMBERS);
 		
 		// benchmark AtomicLongBuffer
-		buffer = new AtomicLongBuffer(20);
+		buffer = new AtomicLongBuffer(16);
+		benchmark(buffer, NUM_THREADS, NUM_NUMBERS);
+		
+		// benchmark SimpleLongBuffer
+		buffer = new SimpleLongBuffer(16);
 		benchmark(buffer, NUM_THREADS, NUM_NUMBERS);
 	}
 	
